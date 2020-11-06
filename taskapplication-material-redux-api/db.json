@@ -1,0 +1,44 @@
+{
+  "tasks": [
+    {
+      "id": "4e7de2fb-3487-5ecb-bb61-0433-3b8d",
+      "name": "Java",
+      "status": false
+    },
+    {
+      "id": "86f32bd7-9684-1bb1-705d-2c6a-08d5",
+      "name": "Golang",
+      "status": true
+    },
+    {
+      "id": "59cedd73-c659-32a3-4b35-772b-64c4",
+      "name": "C++",
+      "status": true
+    },
+    {
+      "id": "2d5f6995-5fe4-b4a3-eab3-ffd3-b2bd",
+      "name": "Reactjs",
+      "status": false
+    },
+    {
+      "id": "ebe3f752-9729-bd26-a972-a7d1-cbd8",
+      "name": "React Native",
+      "status": true
+    },
+    {
+      "id": "258ad062-6b23-481a-7cf2-f496-0433",
+      "name": "",
+      "status": false
+    },
+    {
+      "id": "5a4a5012-61a8-0036-87ef-0d0b-4717",
+      "name": "",
+      "status": false
+    },
+    {
+      "id": "72ab6cce-427f-ace9-3f62-7674-1e5d",
+      "name": "",
+      "status": false
+    }
+  ]
+}

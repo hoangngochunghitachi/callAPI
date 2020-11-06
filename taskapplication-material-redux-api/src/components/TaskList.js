@@ -15,6 +15,7 @@ import { connect } from 'react-redux';
 import * as actions from './../actions/index';
 import styles from './../styles/styles';
 import TaskItem from "./TaskItem";
+import axios from 'axios';
 
 class TaskList extends Component {
 
@@ -23,7 +24,19 @@ class TaskList extends Component {
         this.state = {
             filterName: '',
             filterStatus: -1,
-        }
+            tasks: []
+        };
+    }
+
+    componentDidMount() {
+        axios.get(`https://json-server-ngoc-hung.herokuapp.com/tasks`)
+            .then(res => {
+                const data = res.data;
+                console.log(data)
+                this.setState({
+                    tasks: data
+                })
+            })
     }
 
     onHandleChange = (event) => {
@@ -42,8 +55,9 @@ class TaskList extends Component {
     }
 
     render() {
+        let tasks = this.state.tasks;
         const { classes } = this.props;
-        let { tasks, filterTable, keyword, sort } = this.props;
+        let { filterTable, keyword, sort } = this.props;
         if (filterTable.name) {
             tasks = tasks.filter((task) => {
                 return task.name.toLowerCase().indexOf(filterTable.name) !== -1
@@ -119,7 +133,7 @@ class TaskList extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        tasks: state.tasks,
+        // tasks: state.tasks,
         filterTable: state.filterTable,
         keyword: state.search,
         sort: state.sort
